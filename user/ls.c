@@ -50,7 +50,9 @@ ls(char *path)
     if(strlen(path) + 1 + DIRSIZ + 1 > sizeof buf){
       printf("ls: path too long\n");
       break;
+    
     }
+    //拷贝目录到文件
     strcpy(buf, path);
     p = buf+strlen(buf);
     *p++ = '/';
